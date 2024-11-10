@@ -34,19 +34,19 @@ const QuestionInput = ({ question, index, onNext, onBack, answer: initialAnswer,
         } else {
             onNext(selectedAnswer);
         }
+        setSelectedAnswer(null);
+        setIsFlexible(null)
     };
 
     const renderInput = () => {
         const activities = answers[0] === "Adventure" ? ["Hiking", "Camping", "Skiing", "Surfing", "Other"] : ["Beach", "Spa", "Other"];
-        console.log("index")
-        console.log(index)
-        console.log("answers")
-        console.log(answers)
+        const travelTypes = ['Adventure', 'Relaxation']
+        const destinations = ["Option 1", "Option 2", "Option 3"]
         switch (index) {
             case 0:
                 return (
                     <>
-                        {['Adventure', 'Relaxation'].map((option, idx) => (
+                        {travelTypes.map((option, idx) => (
                             <button
                                 key={idx}
                                 className={`btn m-2 ${selectedAnswer === option ? 'btn-primary' : 'btn-outline-primary'}`}
@@ -213,7 +213,7 @@ const QuestionInput = ({ question, index, onNext, onBack, answer: initialAnswer,
             case 8:
                 return (
                     <>
-                        {['Option 1', 'Option 2', 'Option 3'].map((option, idx) => (
+                        {destinations.map((option, idx) => (
                             <button
                                 key={idx}
                                 className={`btn m-2 ${selectedAnswer === option ? 'btn-primary' : 'btn-outline-primary'}`}
