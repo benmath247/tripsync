@@ -1,0 +1,67 @@
+Survey.css .survey-container {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.survey-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.survey-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.survey-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.survey-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.survey-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.survey-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.survey-completion-message {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.survey-summary {
+    list-style: none;
+    padding: 0;
+}
+
+.survey-summary li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
