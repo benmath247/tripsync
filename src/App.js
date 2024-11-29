@@ -1,33 +1,33 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Navbar, Container } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
-import Survey from './pages/Survey'
+import Survey from './pages/Survey';
+import ResultsDisplay from './pages/ResultsDisplay';
+import CityDetail from './pages/CityDetail';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className="navbar-brand" to="/">TripSync</Link>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </li>
-            </ul>
-          </div>
-        </nav> */}
+        <Navbar bg="light" className="header">
+          <Container className="justify-content-center">
+            <Navbar.Brand href="/">
+              <img
+                src="/logo.png"
+                alt="TripSync Logo"
+                className="logo"
+              />
+            </Navbar.Brand>
+          </Container>
+        </Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/survey" element={<Survey />} />
+          <Route path="/results" element={<ResultsDisplay />} />
+          <Route path="/city/:name" element={<CityDetail />} />
         </Routes>
       </div>
     </Router>

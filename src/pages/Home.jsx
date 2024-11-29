@@ -12,9 +12,24 @@ function Home() {
                                 Share &gt;
                             </button>
                         </div>
-                        <h1 className="display-4">Welcome to TripSync</h1>
+                        <h1>What is this website?</h1>
                         <p className="lead">
-                            Welcome to TripSync! Let us help you find the best travel options for your next adventure. Answer a few quick questions to get started!
+                            This is an AI-based travel planner.
+                        </p>
+                        <p>
+                            You tell us your travel goals
+                        </p>
+                        <p>
+                            We tell you a list of best destinations, accomodation, and transportation based on your preferences
+                        </p>
+                        <h1>
+                            What are we asking from you?
+                        </h1>
+                        <p>
+                            We think this tool would be really helpful to people that travel (everyone) and we want to get your feedback!
+                        </p>
+                        <p>
+                            Read the product description, scroll through the website and let us know what you think. You can sign up for early access and a discount once this product comes to life!
                         </p>
                         <Link to="/survey">
                             <button className="btn btn-primary btn-lg mt-3">

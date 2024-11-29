@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 export default function Results({ questions, answers }) {
     const formatAnswer = (index) => {
@@ -14,8 +15,46 @@ export default function Results({ questions, answers }) {
     };
 
     return (
+
         <div className="container mt-4">
-            <h2>Trip Details</h2>
+            <Container>
+                <Row>
+                    <Col md={4}>
+                        <Card>
+                            <Card.Img variant="top" src="https://via.placeholder.com/150" />
+                            <Card.Body>
+                                <Card.Title>Destination 1</Card.Title>
+                                <Card.Text>
+                                    $1000 - $2000 per person
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={4}>
+                        <Card>
+                            <Card.Img variant="top" src="https://via.placeholder.com/150" />
+                            <Card.Body>
+                                <Card.Title>Destination 2</Card.Title>
+                                <Card.Text>
+                                    $1000 - $2000 per person
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col md={4}>
+                        <Card>
+                            <Card.Img variant="top" src="https://via.placeholder.com/150" />
+                            <Card.Body>
+                                <Card.Title>Card Title 3</Card.Title>
+                                <Card.Text>
+                                    $1000 - $2000 per person
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+            <h2>Click here to see your survey results</h2>
             <ul className="list-group">
                 {questions.map((question, index) => (
                     <li key={index} className="list-group-item">
@@ -24,6 +63,7 @@ export default function Results({ questions, answers }) {
                     </li>
                 ))}
             </ul>
+
         </div>
     );
 }

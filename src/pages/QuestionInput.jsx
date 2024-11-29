@@ -58,6 +58,7 @@ const QuestionInput = ({ question, index, onNext, onBack, answer: initialAnswer,
                     </>
                 );
             case 1:
+                // combine 0 and 1
                 return (
                     <>
                         {activities.map((option, idx) => (
@@ -196,21 +197,21 @@ const QuestionInput = ({ question, index, onNext, onBack, answer: initialAnswer,
                         </div>
                     </div>
                 );
+            // case 7:
+            //     return (
+            //         <>
+            //             {['Low', 'Medium', 'High'].map((option, idx) => (
+            //                 <button
+            //                     key={idx}
+            //                     className={`btn m-2 ${selectedAnswer === option ? 'btn-primary' : 'btn-outline-primary'}`}
+            //                     onClick={() => handleSelect(option)}
+            //                 >
+            //                     {option}
+            //                 </button>
+            //             ))}
+            //         </>
+            //     );
             case 7:
-                return (
-                    <>
-                        {['Low', 'Medium', 'High'].map((option, idx) => (
-                            <button
-                                key={idx}
-                                className={`btn m-2 ${selectedAnswer === option ? 'btn-primary' : 'btn-outline-primary'}`}
-                                onClick={() => handleSelect(option)}
-                            >
-                                {option}
-                            </button>
-                        ))}
-                    </>
-                );
-            case 8:
                 return (
                     <>
                         {destinations.map((option, idx) => (

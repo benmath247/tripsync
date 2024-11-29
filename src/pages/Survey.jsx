@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Survey.css';
 import QuestionInput from './QuestionInput';
 import Results from './Results'
+import { Button } from 'react-bootstrap';
 
 function Survey() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -16,7 +17,7 @@ function Survey() {
         'Are you open to driving during the trip?',
         'Do you have a budget in mind for this trip?',
         'What level of comfort are you imagining?',
-        "I found these destinations for you. Just pick the one you like and book all that you need under the links listed. If you don't like these results go back and change your choices."
+        // "I found these destinations for you. Just pick the one you like and book all that you need under the links listed. If you don't like these results go back and change your choices."
     ];
 
     const handleNext = (answer) => {
@@ -48,9 +49,10 @@ function Survey() {
                     ) : (
                         <div>
                             <h3>Thank you for completing the survey!</h3>
-                            <ul>
+                            {/* <ul>
                                 <Results questions={questions} answers={answers} />
-                            </ul>
+                            </ul> */}
+                            <Button href="results">Click to see Results</Button>
                         </div>
                     )}
                 </div>
